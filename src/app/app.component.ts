@@ -10,7 +10,7 @@ import { Video } from './interfaces/video';
 export class AppComponent {
   constructor(private videosService: VideosService) {
     this.videosService.getVideos().subscribe((respuesta)=>{
-      respuesta.forEach((r)=> console.log(r.url));
+      respuesta.forEach((r)=> console.log(r.nombre));
     });
   }
 }

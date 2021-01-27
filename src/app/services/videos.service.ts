@@ -10,9 +10,9 @@ export class VideosService {
 
   constructor(private http: HttpClient) { }
 
-  
-  getVideos():Observable<Array<Video>>{
-    return this.http.get<Array<Video>>('http://18.191.217.192/api/videos.php');
+
+  getVideos():Observable<Video[]>{ //Observale equivale a un Future
+    return this.http.get<Video[]>('http://18.191.217.192/api/videos.php');
   }
-  
+
 }
