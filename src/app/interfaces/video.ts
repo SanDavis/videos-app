@@ -1,4 +1,4 @@
-export interface Movie {
+export interface Video {
     id:      string;
     nombre:  string;
     url:     string;

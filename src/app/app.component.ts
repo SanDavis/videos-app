@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VideosService } from './services/videos.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'videos-app';
+  constructor(private videosService: VideosService) {
+    this.videosService.getVideos().subscribe((respuesta)=>console.log(respuesta));
+  }
 }
